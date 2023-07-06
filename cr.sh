@@ -89,10 +89,10 @@ main() {
       echo "changed_charts=$(
         IFS=,
         echo "${changed_charts[*]}"
-      )" >changed_charts.txt
+      )" > changed_charts.txt
     else
       echo "Nothing to do. No chart changes detected."
-      echo "changed_charts=" >changed_charts.txt
+      echo "changed_charts=" > changed_charts.txt
     fi
   else
     install_chart_releaser
@@ -102,7 +102,7 @@ main() {
     update_index
   fi
 
-  echo "chart_version=${latest_tag}" >chart_version.txt
+  echo "chart_version=${latest_tag}" > chart_version.txt
 
   popd >/dev/null
 }
